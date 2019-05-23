@@ -24,7 +24,7 @@ class homeItem extends Component{
                 <div className={'title'}>{this.state.info.title}</div>
                 <div className={'info_image_person'}>
                     <div className={'info_person'}>
-                        <div className={'info'}>{this.state.info.info}</div>
+                        <div className={'info'} style={{"WebkitBoxOrient": "vertical"}}>{this.state.info.info}</div>
                         <div className={'person'}>
                             <img className={'person_header_img'} src={img} />
                             <div className={'person_name'}>{this.state.info.name}</div>

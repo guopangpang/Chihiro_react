@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './home.css'
 import HomeItem from '../../components/homeItem/homeItem'
+import Header from '../../components/header/header'
 
 class Home extends Component{
     constructor(props){
@@ -8,9 +9,12 @@ class Home extends Component{
     }
     render(){
         return(
-            <div className={'home_container'}>
-                <HomeItem></HomeItem>
-                <HomeItem></HomeItem>
+            <div>
+                <Header/>
+                <div className={'home_container'}>
+                    <HomeItem></HomeItem>
+                    <HomeItem></HomeItem>
+                </div>
             </div>
         )
     }
