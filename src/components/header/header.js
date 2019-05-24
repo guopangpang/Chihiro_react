@@ -13,9 +13,9 @@ class Header extends Component{
     render(){
         return(
             <div className={'header'}>
-                <text>{this.state.back_icon}</text>
-                <text>{this.state.name}</text>
-                <text>{this.state.right_icon}</text>
+                <span>{this.state.back_icon}</span>
+                <span>{this.state.name}</span>
+                <span>{this.state.right_icon}</span>
             </div>
         )
     }
