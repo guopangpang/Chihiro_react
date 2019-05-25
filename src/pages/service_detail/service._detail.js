@@ -27,7 +27,8 @@ class ServiceDetail extends Component{
                 name:'暗月',
                 img:img
             },
-            selectedValue:""
+            selectedValue:"",
+            is_question:true
         }
     }
     componentWillMount(){
@@ -48,7 +49,24 @@ class ServiceDetail extends Component{
             selectedValue:e.target.value
         })
     };
+    goto_order_detail = () =>{
+        this.props.history.push({pathname:'/order_detail'})
+    };
     render(){
+        let button;
+        if(this.state.is_question){
+            button = (
+                <div className={'pay_button'} onClick={this.goto_order_detail}>
+                    <div className={'pay_button_word'}>支付</div>
+                </div>
+            )
+        }else{
+            button = (
+                <div>
+
+                </div>
+            )
+        }
         return(
             <div className={'service_detail_container'}>
                 <Swiper item={'aaa'}/>
@@ -77,7 +95,7 @@ class ServiceDetail extends Component{
                     </div>
                     <div className={'more_able'}>查看能力</div>
                 </div>
-                <div>
+                <div className={'service_radio'}>
                     <Radio
                         checked={this.state.selectedValue === 'a'}
                         onChange={this.choose_price}
@@ -85,6 +103,7 @@ class ServiceDetail extends Component{
                         name="radio-button-demo"
                         aria-label="A"
                     />
+                    <span>￥1.00&nbsp;&nbsp;咨询费</span>
                     <Radio
                         checked={this.state.selectedValue === 'b'}
                         onChange={this.choose_price}
@@ -92,9 +111,10 @@ class ServiceDetail extends Component{
                         name="radio-button-demo"
                         aria-label="B"
                     />
+                    <span>￥150.00&nbsp;&nbsp;服务费</span>
                 </div>
-
                 <div className={'leave_blank'}></div>
+                { button }
             </div>
         )
     }

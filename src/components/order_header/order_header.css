@@ -1,0 +1,78 @@
+.order_header_container{
+    margin-top: 3.2rem;
+}
+.order_header_container .order_info{
+    position: relative;
+    padding-right: 1.2rem;
+    margin-left: 1.2rem;
+    padding-left: 1rem;
+    padding-top: 1.2rem;
+    background-color: #fff;
+    font-size:1rem;
+    font-weight: bold;
+}
+.order_header_container .order_info::before{
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    content: '';
+    background-color: #03AAF6;
+    width: .4rem;
+    height: 1.3rem;
+}
+.order_header_info{
+    display: flex;
+    justify-content: space-between;
+    padding:1.2rem;
+    background-color: #fff;
+}
+.order_header_img{
+    width: 6rem;
+    height: 6rem;
+}
+.order_header_title_fee{
+    width: calc(100vw - 9.5rem);
+}
+.order_header_title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.order_header_advisory{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .8rem;
+}
+.order_header_service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+.order_header_fee_word{
+    color: #666;
+    font-size: .9rem;
+}
+.order_header_fee_money{
+    color: #050404;
+    font-size: .9rem;
+}
+.order_header_real_payment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2rem 1.2rem;
+}
+.order_header_real_payment_word{
+    color: #AAAAAA;
+}
+.order_header_real_payment_money{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #F89304;
+}
+.order_header_leave{
+    height: 1.2rem;
+    width: 100vw;
+    background-color: #ededed;
+}
