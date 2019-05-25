@@ -1,0 +1,23 @@
+.review_header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    /*margin-bottom: 1.2rem;*/
+    height: 1.2rem;
+    background-color: #fff;
+    font-size: .9rem;
+}
+.review_header_container .review_num{
+    color: #020202;
+}
+.review_header_container .percent_show_all{
+    display: flex;
+    justify-content: space-between;
+}
+.review_header_container .percent{
+    margin-right: 1rem;
+}
+.review_header_container .show_all{
+    color: #03AAF6;
+}

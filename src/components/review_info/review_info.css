@@ -1,0 +1,41 @@
+.review_info_container{
+    padding: .8rem 1.2rem;
+    margin-bottom: 1.2rem;
+    background-color: #fff;
+}
+.review_info_container .review_item_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review_info_container .header_img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.review_info_container .name_time_introduction{
+    margin-left: -3rem;
+}
+.review_info_container .review_person_name{
+    font-size: .8rem;
+}
+.review_info_container .time_introduction{
+    display: flex;
+}
+.review_info_container .review_time{
+    font-size: .6rem;
+}
+.review_info_container .introduction{
+    margin-left: 1rem;
+    font-size: .6rem;
+}
+.review_info_container .review{
+    color: #03AAF6;
+    font-size: .8rem;
+}
+.review_info_container .review_info{
+    color: #050505;
+    line-height: 1.2rem;
+    font-size: .8rem;
+    margin-top: .6rem;
+}
