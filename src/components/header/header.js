@@ -10,10 +10,13 @@ class Header extends Component{
             right_icon:""
         }
     }
+    go_back = () =>{
+      window.history.go(-1)
+    };
     render(){
         return(
             <div className={'header'}>
-                <span>{this.state.back_icon}</span>
+                <span onClick={this.go_back}>{this.state.back_icon}</span>
                 <span>{this.state.name}</span>
                 <span>{this.state.right_icon}</span>
             </div>

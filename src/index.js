@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from '../src/pages/home/home';
 import ServiceDetail from '../src/pages/service_detail/service._detail';
 import OrderDetail from '../src/pages/order_detail/order_detail';
+import ReviewList from '../src/pages/review_list/review_list'
+import AbleList from '../src/pages/able_list/able_list'
 
 ReactDOM.render(
     <BrowserRouter>
@@ -15,6 +17,8 @@ ReactDOM.render(
             <Route path="/" exact={true} component={Home} />
             <Route path="/service_detail" component={ServiceDetail} />
             <Route path="/order_detail" component={OrderDetail} />
+            <Route path="/review_list" component={ReviewList} />
+            <Route path="/able_list" component={AbleList} />
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));

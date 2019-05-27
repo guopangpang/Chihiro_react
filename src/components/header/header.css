@@ -9,4 +9,5 @@
     width: calc(100vw - 2.4rem);
     padding: 0 1.2rem;
     background-color: aqua;
+    z-index: 9999;
 }

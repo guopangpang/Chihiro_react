@@ -8,7 +8,6 @@ class homeItem extends Component{
         this.state = {}
     }
     goto_service_detail = () =>{
-        console.log(3335555);
         this.props.history.push({pathname:'/service_detail',query:{id:'22'}})
     };
     render(){

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './service_detail.css'
 import Swiper from '../../components/swiper/swiper'
+import Header from '../../components/header/header'
 import ReviewHeader from '../../components/review_header/review_header'
 import ReviewInfo from '../../components/review_info/review_info'
 import Radio from '@material-ui/core/Radio';
@@ -52,6 +53,9 @@ class ServiceDetail extends Component{
     goto_order_detail = () =>{
         this.props.history.push({pathname:'/order_detail'})
     };
+    goto_able_list = () =>{
+        this.props.history.push({pathname:'/able_list'})
+    };
     render(){
         let button;
         if(this.state.is_question){
@@ -64,11 +68,12 @@ class ServiceDetail extends Component{
             button = (
                 <div>
 
-                </div>
+                </div >
             )
         }
         return(
             <div className={'service_detail_container'}>
+                <Header/>
                 <Swiper item={'aaa'}/>
                 <div className={'header_info'}>
                     <div className={'title_person'}>
@@ -86,14 +91,14 @@ class ServiceDetail extends Component{
                         {this.state.info.time}
                     </div>
                 </div>
-                <ReviewHeader/>
-                <ReviewInfo />
+                <ReviewHeader is_detail={true} history = {this.props.history}/>
+                <ReviewInfo is_add_review = {false} />
                 <div className={'person_able'}>
                     <div className={'header_img_able_name'}>
                         <img className={'person_able_img'} src={this.state.person.img}/>
                         <div className={'person_able_name'}>{this.state.person.name}</div>
                     </div>
-                    <div className={'more_able'}>查看能力</div>
+                    <div className={'more_able'} onClick={this.goto_able_list}>查看能力</div>
                 </div>
                 <div className={'service_radio'}>
                     <Radio

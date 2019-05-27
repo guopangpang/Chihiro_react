@@ -16,6 +16,10 @@ class ReviewInfo extends Component{
         }
     }
     render(){
+        let add_review = <div></div>;
+        if(this.props.is_add_review){
+            add_review = <div className={'review'}>追评</div>
+        }
         return(
             <div className={'review_info_container'}>
                 <div className={'review_item_header'}>
@@ -27,7 +31,7 @@ class ReviewInfo extends Component{
                             <div className={'introduction'}>{this.state.review_info.introduction}</div>
                         </div>
                     </div>
-                    <div className={'review'}>追评</div>
+                    { add_review }
                 </div>
                 <div className={'review_info'}>{this.state.review_info.info}</div>
             </div>
