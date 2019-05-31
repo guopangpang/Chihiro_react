@@ -6,7 +6,7 @@ import './App.css'
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Home from '../src/pages/home/home';
-import ServiceDetail from '../src/pages/service_detail/service._detail';
+import ServiceDetail from './pages/service_detail/service_detail';
 import OrderDetail from '../src/pages/order_detail/order_detail';
 import ReviewList from '../src/pages/review_list/review_list'
 import AbleList from '../src/pages/able_list/able_list'

@@ -3,6 +3,8 @@ import './home.css'
 import HomeItem from '../../components/homeItem/homeItem'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
+import withHeader from '../../withSubscription/withHeader'
+import iiHOC from '../../withSubscription/inheritanceInversion'
 
 class Home extends Component{
     constructor(props){
@@ -27,23 +29,30 @@ class Home extends Component{
         }
         this.setState({
             home_list:this.state.home_list
-        })
+        });
     }
+    method =() =>{
+      console.log('method',this.props);
+    };
     render(){
         return(
-            <div>
-                <Header/>
-                <div className={'home_container'}>
-                    {
-                        this.state.home_list.map((item,index)=>{
-                            return <HomeItem key={index} item={item} history={this.props.history}/>
-                        })
-                    }
-                </div>
-                <Footer home_props={this.props}/>
+            <div onClick={this.props.change_name}>
+                普通组件
+                {this.props.value}
+                {/*<Header/>*/}
+                {/*<div className={'home_container'}>*/}
+                    {/*{*/}
+                        {/*this.state.home_list.map((item,index)=>{*/}
+                            {/*return <HomeItem key={index} item={item} history={this.props.history}/>*/}
+                        {/*})*/}
+                    {/*}*/}
+                {/*</div>*/}
+                {/*<Footer home_props={this.props}/>*/}
             </div>
         )
     }
 }
 
-export default Home
+// const EnhanceDemo = withHeader(Home,'aaa');
+const EnhanceDemo = iiHOC(Home);
+export default EnhanceDemo
