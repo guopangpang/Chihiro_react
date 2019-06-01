@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './homeItem.css'
 import img from '../../image/image.jpg'
+import add_router from '../../withSubscription/add_router'
 
 class homeItem extends Component{
     constructor(props){
@@ -33,5 +34,7 @@ class homeItem extends Component{
         )
     }
 }
+
+// homeItem = add_router(homeItem);
 
 export default homeItem

@@ -6,6 +6,7 @@ import './App.css'
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Home from '../src/pages/home/home';
+import Question from '../src/pages/question/question'
 import ServiceDetail from './pages/service_detail/service_detail';
 import OrderDetail from '../src/pages/order_detail/order_detail';
 import ReviewList from '../src/pages/review_list/review_list'
@@ -15,10 +16,11 @@ ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Route path="/" exact={true} component={Home} />
-            <Route path="/service_detail" component={ServiceDetail} />
+            <Route path="/question" component={Question} />
             <Route path="/order_detail" component={OrderDetail} />
             <Route path="/review_list" component={ReviewList} />
             <Route path="/able_list" component={AbleList} />
+            <Route path="/service_detail" component={ServiceDetail} />
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));
