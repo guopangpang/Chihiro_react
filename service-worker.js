@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chihiroreact/precache-manifest.b1b9504826717c9f6c483eccf07e4165.js"
+  "/chihiroreact/precache-manifest.79908847f569b8412fdd29ed9dbb2554.js"
 );
 
 self.addEventListener('message', (event) => {
