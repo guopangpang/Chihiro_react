@@ -18,7 +18,7 @@ class Question extends Component{
             info:'我想要加盟一下云南十里香小锅米线，但是有什么\n' +
             '注意s事项，如果来开始，请有经验的人帮忙解',
             name:'暗*月',
-            time:'2019年3月24',
+            time:'2019年6月3',
             good_present:'95%',
             pay_person:'233',
             header_img:'../../image/image2.jpg',
