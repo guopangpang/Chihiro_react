@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/text/static/css/main.df50d47d.chunk.css",
-    "main.js": "/text/static/js/main.7b21a5ff.chunk.js",
-    "main.js.map": "/text/static/js/main.7b21a5ff.chunk.js.map",
-    "runtime~main.js": "/text/static/js/runtime~main.cf280aaf.js",
-    "runtime~main.js.map": "/text/static/js/runtime~main.cf280aaf.js.map",
-    "static/js/2.3d303779.chunk.js": "/text/static/js/2.3d303779.chunk.js",
-    "static/js/2.3d303779.chunk.js.map": "/text/static/js/2.3d303779.chunk.js.map",
-    "index.html": "/text/index.html",
-    "precache-manifest.c76f2f1d4fc702593599517a1ee079a1.js": "/text/precache-manifest.c76f2f1d4fc702593599517a1ee079a1.js",
-    "service-worker.js": "/text/service-worker.js",
-    "static/css/main.df50d47d.chunk.css.map": "/text/static/css/main.df50d47d.chunk.css.map",
-    "static/media/image.jpg": "/text/static/media/image.2699f754.jpg"
+    "main.css": "/Chihiro_react/static/css/main.df50d47d.chunk.css",
+    "main.js": "/Chihiro_react/static/js/main.c484f65e.chunk.js",
+    "main.js.map": "/Chihiro_react/static/js/main.c484f65e.chunk.js.map",
+    "runtime~main.js": "/Chihiro_react/static/js/runtime~main.61fe5d77.js",
+    "runtime~main.js.map": "/Chihiro_react/static/js/runtime~main.61fe5d77.js.map",
+    "static/js/2.3d303779.chunk.js": "/Chihiro_react/static/js/2.3d303779.chunk.js",
+    "static/js/2.3d303779.chunk.js.map": "/Chihiro_react/static/js/2.3d303779.chunk.js.map",
+    "index.html": "/Chihiro_react/index.html",
+    "precache-manifest.614e4523e5ae1737e0140bac660de851.js": "/Chihiro_react/precache-manifest.614e4523e5ae1737e0140bac660de851.js",
+    "service-worker.js": "/Chihiro_react/service-worker.js",
+    "static/css/main.df50d47d.chunk.css.map": "/Chihiro_react/static/css/main.df50d47d.chunk.css.map",
+    "static/media/image.jpg": "/Chihiro_react/static/media/image.2699f754.jpg"
   }
 }
