@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './App.css'
 
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom';
 
 import Home from '../src/pages/home/home';
 import Question from '../src/pages/question/question'
@@ -12,17 +12,19 @@ import OrderDetail from '../src/pages/order_detail/order_detail';
 import ReviewList from '../src/pages/review_list/review_list'
 import AbleList from '../src/pages/able_list/able_list'
 
+//gh-pages对BrowserRouter无法兼容
+
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
         <Switch>
-            <Route path="/" exact={true} strict component={Home} />
+            <Route path="/" exact={true} strict  component={Home} />
             <Route path="/question" component={Question} />
             <Route path="/order_detail" component={OrderDetail} />
             <Route path="/review_list" component={ReviewList} />
             <Route path="/able_list" component={AbleList} />
             <Route path="/service_detail" component={ServiceDetail} />
         </Switch>
-    </BrowserRouter>,
+    </HashRouter>,
     document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
