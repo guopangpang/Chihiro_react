@@ -15,7 +15,7 @@ import AbleList from '../src/pages/able_list/able_list'
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
-            <Route path="/" exact={true} component={Home} />
+            <Route path="/" exact={true} strict component={Home} />
             <Route path="/question" component={Question} />
             <Route path="/order_detail" component={OrderDetail} />
             <Route path="/review_list" component={ReviewList} />

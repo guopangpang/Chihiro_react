@@ -1,7 +1,7 @@
 {
-  "name": "Chihiro_react",
+  "name": "chihiroreact",
   "version": "0.1.0",
-  "homepage": "/Chihiro_react",
+  "homepage": "https://guopangpang.github.io/chihiroreact",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
