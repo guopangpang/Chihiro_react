@@ -1,0 +1,29 @@
+.butttom_button_container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3.2rem;
+    background-color: #ededed;
+}
+.button_orange{
+    width: 70vw;
+    height: 2.4rem;
+    border-radius: 1.2rem;
+    background-color: orange;
+    line-height: 2.4rem;
+    text-align: center;
+    color: #fff;
+}
+.button_green{
+    width: 70vw;
+    height: 2.4rem;
+    border-radius: 1.2rem;
+    background-color: green;
+    line-height: 2.4rem;
+    text-align: center;
+    color: #fff;
+}

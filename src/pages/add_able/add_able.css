@@ -1,0 +1,28 @@
+.add_able_container{
+    margin: 3.2rem 0;
+    padding: 0 1.2rem;
+}
+.add_able_title{
+    padding: 1rem 0 0 0;
+}
+.add_able_title_word{
+
+}
+.add_able_title_value{
+    margin-top: .5rem;
+    padding: 0 1rem;
+    height: 2rem;
+    width: calc(100vw - 4.4rem);
+    border: 1px solid #ededee;
+}
+.add_able_info{
+    padding: 1rem 0 0 0;
+}
+.add_able_info_word{}
+.add_able_info_value{
+    margin-top: .5rem;
+    padding: 1rem;
+    height: 6rem;
+    width: calc(100vw - 4.4rem);
+    border: 1px solid #ededee;
+}

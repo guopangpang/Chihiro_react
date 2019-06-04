@@ -12,19 +12,21 @@ import OrderDetail from '../src/pages/order_detail/order_detail';
 import ReviewList from '../src/pages/review_list/review_list'
 import AbleList from '../src/pages/able_list/able_list'
 import My from '../src/pages/my/my'
+import AddAble from '../src/pages/add_able/add_able'
 
 //gh-pages对BrowserRouter无法兼容
 
 ReactDOM.render(
     <HashRouter>
         <Switch>
-            <Route path="/" exact={true} strict  component={Home} />
-            <Route path="/question" component={Question} />
-            <Route path="/order_detail" component={OrderDetail} />
+            <Route path="/" exact={true} strict  name={'首页'} component={Home} />
+            <Route path="/question" name={'问题'} component={Question} />
+            <Route path="/order_detail" name={'详情'} component={OrderDetail} />
             <Route path="/review_list" component={ReviewList} />
             <Route path="/able_list" component={AbleList} />
             <Route path="/service_detail" component={ServiceDetail} />
             <Route path="/my" component={My} />
+            <Route path="/add_able" component={AddAble} />
         </Switch>
     </HashRouter>,
     document.getElementById('root'));
