@@ -3,6 +3,7 @@ import './able_list.css'
 
 import Header from '../../components/header/header'
 import AbleItem from '../../components/able_item/able_item'
+import BottomButton from '../../components/bottom_button/bottom_button'
 
 class AbleList extends Component{
     constructor(props){
@@ -29,6 +30,10 @@ class AbleList extends Component{
             able_list:this.state.able_list
         });
     }
+    goto_add_able = (data)=>{
+        console.log(data);
+        this.props.history.push({pathname:'/add_able',query:{}})
+    };
     render(){
         return(
             <div className={'able_list_container'}>
@@ -38,6 +43,7 @@ class AbleList extends Component{
                         return <AbleItem key={index} item={item} history={this.props.history}/>
                     })
                 }
+                <BottomButton word={'新建能力'} goto_add_able={this.goto_add_able}/>
             </div>
         )
     }

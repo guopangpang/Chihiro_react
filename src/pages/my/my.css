@@ -1,5 +1,6 @@
 .my_container{
     margin: 3.2rem 0;
+    height: calc(100vh - 6.4rem);
     background-color: #ededed;
 }
 .my_header_background{
@@ -32,5 +33,69 @@
     border-radius: 50%;
 }
 .my_header_name{
+    margin-left: 1.5rem;
+    color: #fff;
+}
 
+.my_balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: calc(50vw - 1.6rem);
+    left: 10vw;
+    height: 3.2rem;
+    width: 80vw;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+.my_balance_info{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+.my_balance_word{
+
+}
+.my_balance_money{
+
+}
+.my_detail_withdraw{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    font-size: .9rem;
+    color: #01A6F6;
+}
+.my_detail{
+}
+.my_withdraw{}
+.my_cell_container{
+    margin-top: 2.5rem;
+    font-size: .9rem;
+}
+.my_cell{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+.my_cell_left_img{
+    margin-left: 1.2rem;
+    width: 1.5rem;
+}
+.my_cell_name_right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin-left: 1rem;
+    padding-right: 1.2rem;
+    height: 3rem;
+}
+.my_cell_word{
+    /*margin-left: 1rem;*/
+}
+.my_cell_right_img{
+    width: .8rem;
+    height: 1.5rem;
 }
