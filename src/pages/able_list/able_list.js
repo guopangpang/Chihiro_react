@@ -43,7 +43,7 @@ class AbleList extends Component{
                         return <AbleItem key={index} item={item} history={this.props.history}/>
                     })
                 }
-                <BottomButton word={'新建能力'} goto_add_able={this.goto_add_able}/>
+                <BottomButton word={'新建能力'} operating={this.goto_add_able}/>
             </div>
         )
     }

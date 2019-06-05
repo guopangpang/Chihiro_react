@@ -9,7 +9,7 @@ class BottomButton extends Component{
         }
     }
     goto_new_page =() =>{
-        this.props.goto_add_able(this.state.orange);
+        this.props.operating(this.state.orange);
     }
     render(){
         return(
