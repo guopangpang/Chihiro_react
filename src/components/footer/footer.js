@@ -56,7 +56,7 @@ class Footer extends Component{
                     this.state.icon_list.map((item,index)=>{
                         return (
                             <div key={index} className={'footer_item'} onClick={this.goto(item)}>
-                                <img className={'image'} src={item.icon} />
+                                <img className={'image'} src={item.icon} alt={item.icon} />
                                 <span className={'text'} style={{"color":item.color}}>{item.name}</span>
                             </div>
                         )
