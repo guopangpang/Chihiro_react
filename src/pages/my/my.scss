@@ -1,7 +1,7 @@
 .my_container{
-    margin: 3.2rem 0;
+    margin: $--wrap-height 0;
     height: calc(100vh - 6.4rem);
-    background-color: #ededed;
+    background-color: $--wrap-background-color;
 }
 .my_header_background{
     position: relative;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './review_list.css'
+import './review_list.scss'
 
 import Header from '../../components/header/header'
 import ReviewHeader from '../../components/review_header/review_header'

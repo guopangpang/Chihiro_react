@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './able_item.css'
+import './able_item.scss'
 import img from '../../image/image.jpg'
 
 class AbleItem extends Component{

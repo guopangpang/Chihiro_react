@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './question.css'
+import './question.scss'
 
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'

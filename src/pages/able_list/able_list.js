@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './able_list.css'
+import './able_list.scss'
 
 import Header from '../../components/header/header'
 import AbleItem from '../../components/able_item/able_item'

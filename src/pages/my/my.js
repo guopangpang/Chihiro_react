@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './my.css'
+import './my.scss'
 import img from '../../image/image.jpg'
 import able_img from '../../image/my_able.png'
 import question_img from '../../image/my_question.png'

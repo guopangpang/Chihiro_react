@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './review_header.css'
+import './review_header.scss'
 
 class ReviewHeader extends Component{
     constructor(props){

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './footer.css'
+import './footer.scss'
 import find_person from '../../image/find_person.png'
 import find_person_blue from '../../image/find_person_blue.png'
 import find_question from '../../image/find_question.png'

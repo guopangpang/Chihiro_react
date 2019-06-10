@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import './review_info.css'
+import './review_info.scss'
 import img from '../../image/image.jpg'
 
 class ReviewInfo extends Component{

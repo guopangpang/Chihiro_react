@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './order_header.css'
+import './order_header.scss'
 import Header from '../../components/header/header'
 import img from '../../image/image.jpg'
 
