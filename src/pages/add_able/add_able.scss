@@ -1,5 +1,5 @@
 .add_able_container{
-    margin: 3.2rem 0;
+    margin: $--wrap-height 0;
     padding: 0 1.2rem;
 }
 .add_able_title{
@@ -43,7 +43,7 @@
 }
 .add_img_border{
     width: 91%;
-    border: 1px solid #ededed;
+    border: 1px solid $--wrap-background-color;
 }
 .add_able_button_row{
     text-align: center;

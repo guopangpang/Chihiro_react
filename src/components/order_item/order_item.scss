@@ -1,0 +1,104 @@
+$marginTop:.6rem;
+$font-size:.8rem;
+$color:#666;
+
+.order_item_container{
+  padding: $--wrap-padding-border;
+  background-color: #fff;
+  margin-bottom: 1.2rem;
+  .order_item_word_container{
+    display: flex;
+    .order_item_word{
+      width: calc(100vw - 2.4rem - 5rem);
+      .order_item_title{
+        width: 100%;
+        font: {
+          size: 1.2rem;
+          weight: bold;
+        };
+      }
+      .order_item_info{
+        width: 100%;
+        margin-top: $marginTop;
+        font-size: $font-size;
+        color: $color;
+      }
+    }
+    .order_item_img{
+      flex: 0 1 auto;
+      width: $--wrap-image-width;
+      height: $--wrap-image-height;
+    }
+  }
+  .order_item_price_container{
+    margin-top: .5rem;
+    .order_item_adv_price{
+      display: flex;
+      justify-content: space-between;
+      margin-top: $marginTop;
+      color:$color;
+      font-size: $font-size;
+      .name_time{
+        display: flex;
+        .service_name{
+          width: 7rem;
+        }
+        .time{}
+      }
+    }
+    .order_item_service_price{
+      display: flex;
+      justify-content: space-between;
+      color:$color;
+      font-size: $font-size;
+      .name_time{
+        display: flex;
+        .service_name{
+          width: 7rem;
+        }
+        .time{}
+      }
+    }
+  }
+  .order_item_person_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+    .person_info{
+      display: flex;
+      align-items: center;
+      .person_name{
+        margin-left: .5rem;
+        font-size: $font-size;
+        color: $color;
+      }
+      .person_img{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+      }
+    }
+    .button_arr{
+      display: flex;
+      color: #fff;
+      .button_one{
+        background-color: green;
+        padding: 0 .8rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        border-radius: .9rem;
+        font-size: .9rem;
+      }
+      .button_two{
+        background-color: orange;
+        padding: 0 .8rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        margin-left: 1rem;
+        border-radius: .9rem;
+        font-size: .9rem;
+      }
+    }
+  }
+}

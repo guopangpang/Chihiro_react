@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './homeItem.css'
+import './homeItem.scss'
 import img from '../../image/image.jpg'
 import add_router from '../../withSubscription/add_router'
 

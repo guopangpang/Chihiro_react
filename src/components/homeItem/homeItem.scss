@@ -1,7 +1,7 @@
 .home_item_container{
     background-color: #fff;
     margin:  0 0 1.2rem 0;
-    padding: 1.2rem;
+    padding: $--wrap-padding-border
 }
 .home_item_container .title{
     font-size: 1.2rem;
@@ -40,8 +40,8 @@
     color: #666
 }
 .home_item_container .image{
-    width: 5rem;
-    height: 5rem;
+    width: $--wrap-image-width;
+    height: $--wrap-image-height;
 }
 .home_item_container .time_num_good{
     display: flex;

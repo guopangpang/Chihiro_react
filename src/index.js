@@ -13,6 +13,7 @@ import ReviewList from '../src/pages/review_list/review_list'
 import AbleList from '../src/pages/able_list/able_list'
 import My from '../src/pages/my/my'
 import AddAble from '../src/pages/add_able/add_able'
+import OrderList from '../src/pages/order_list/order_list'
 
 //gh-pages对BrowserRouter无法兼容
 
@@ -27,6 +28,7 @@ ReactDOM.render(
             <Route path="/service_detail" component={ServiceDetail} />
             <Route path="/my" component={My} />
             <Route path="/add_able" component={AddAble} />
+            <Route path="/order_list" component={OrderList} />
         </Switch>
     </HashRouter>,
     document.getElementById('root'));

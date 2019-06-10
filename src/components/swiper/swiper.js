@@ -1,5 +1,5 @@
 import React from 'react';
-import './swiper.css'
+import './swiper.scss'
 import { useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import SwipeableViews from 'react-swipeable-views';

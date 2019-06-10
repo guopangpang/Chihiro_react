@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './add_able.css'
+import './add_able.scss'
 import 'cropperjs/dist/cropper.css' // 引入Cropper对应的css
 import add_img from '../../image/add_img.png'
 

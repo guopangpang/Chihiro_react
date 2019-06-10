@@ -1,6 +1,6 @@
 .service_detail_container{
-    margin-top: 3.2rem;
-    background-color: #ededed;
+    margin-top: $--wrap-height;
+    background-color: $--wrap-background-color;
 }
 .service_detail_container .header_info{
     padding: 1.2rem;

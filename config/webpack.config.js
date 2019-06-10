@@ -431,7 +431,19 @@ module.exports = function(webpackEnv) {
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                 },
                 'sass-loader'
-              ),
+              ).concat({
+                  // 这行的意思是引入加载器 sass-resources-loader
+                  loader: 'sass-resources-loader',
+                  options: {
+                      // 这里是需要引入全局的资源文件，它可以是一个字符串或者是一个数组， 通常用数组去代替。
+                      // resources: ['../src/public/PubStyle.scss', '../src/public/PubClass.scss'],
+                      resources: [
+                          // resolve方法第二个参数为scss配置文件地址，如果有多个，就进行依次添加即可
+                          path.resolve(__dirname, '../src/public/PubStyle.scss'),
+                          path.resolve(__dirname, '../src/public/PubClass.scss'),
+                      ]
+                  }
+              }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
               // Remove this when webpack adds a warning or an error for this.

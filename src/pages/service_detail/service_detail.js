@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './service_detail.css'
+import './service_detail.scss'
 import Swiper from '../../components/swiper/swiper'
 import Header from '../../components/header/header'
 import ReviewHeader from '../../components/review_header/review_header'

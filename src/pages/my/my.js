@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './my.css'
+import './my.scss'
 import img from '../../image/image.jpg'
 import able_img from '../../image/my_able.png'
 import question_img from '../../image/my_question.png'
@@ -20,6 +20,12 @@ class My extends Component{
     }
     goto_my_able = () => {
       this.props.history.push({pathname:'/able_list',query:{id:1}})
+    };
+    goto_my_order = () => {
+        this.props.history.push({pathname:'/order_list'})
+    };
+    goto_my_review = () =>{
+        this.props.history.push({pathname:'/review_list'})
     };
     render(){
         return(
@@ -56,7 +62,7 @@ class My extends Component{
                         <img src={question_img} className={'my_cell_left_img'}/>
                         <div className={'my_cell_name_right'}>
                             <div className={'my_cell_word'}>我的问题</div>
-                            <img src={back_img} className={'my_cell_right_img'}/>
+                            <img src={back_img} className={'my_cell_right_img'} onClick={this.goto_my_able}/>
                         </div>
                     </div>
 
@@ -64,14 +70,14 @@ class My extends Component{
                         <img src={review_img} className={'my_cell_left_img'}/>
                         <div className={'my_cell_name_right'} style={{'borderBottom': '1px solid #ededed'}}>
                             <div className={'my_cell_word'}>我的评论</div>
-                            <img src={back_img} className={'my_cell_right_img'}/>
+                            <img src={back_img} className={'my_cell_right_img'} onClick={this.goto_my_review}/>
                         </div>
                     </div>
                     <div className={'my_cell'}>
                         <img src={order_img} className={'my_cell_left_img'}/>
                         <div className={'my_cell_name_right'}>
                             <div className={'my_cell_word'}>我的订单</div>
-                            <img src={back_img} className={'my_cell_right_img'}/>
+                            <img src={back_img} className={'my_cell_right_img'} onClick={this.goto_my_order}/>
                         </div>
                     </div>
 
