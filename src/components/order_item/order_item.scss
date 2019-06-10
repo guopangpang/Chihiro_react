@@ -3,7 +3,7 @@ $font-size:.8rem;
 $color:#666;
 
 .order_item_container{
-  padding: 1.2rem;
+  padding: $--wrap-padding-border;
   background-color: #fff;
   margin-bottom: 1.2rem;
   .order_item_word_container{
@@ -26,8 +26,8 @@ $color:#666;
     }
     .order_item_img{
       flex: 0 1 auto;
-      width: 5rem;
-      height: 5rem;
+      width: $--wrap-image-width;
+      height: $--wrap-image-height;
     }
   }
   .order_item_price_container{

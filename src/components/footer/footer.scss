@@ -5,7 +5,7 @@
     display: flex;
     width: 100vw;
     height: $--wrap-height;
-    background-color: #fff;
+    background-color: $--wrap-background-color;
 }
 .footer_item{
     display: flex;

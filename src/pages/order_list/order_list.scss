@@ -1,4 +1,11 @@
 .order_list_container{
   background-color: $--wrap-background-color;
-  margin-top: $--wrap-height;
+  margin-top: $--wrap-height *2 ;
+  .order_tab{
+    position: fixed;
+    top: $--wrap-height;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;
+  }
 }

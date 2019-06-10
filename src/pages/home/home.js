@@ -3,6 +3,7 @@ import './home.scss'
 import HomeItem from '../../components/homeItem/homeItem'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
+import GreatList from '../../components/great_list/great_list'
 import withHeader from '../../withSubscription/withHeader'
 import iiHOC from '../../withSubscription/inheritanceInversion'
 
@@ -34,17 +35,25 @@ class Home extends Component{
     method =() =>{
       console.log('method',this.props);
     };
+    onScroll = (scrollHeight,offsetHeight,scrollTop) =>{
+        if((scrollHeight - offsetHeight - scrollTop)<100){
+            console.log(333333)
+        }
+    };
     render(){
+        let container =
+            <div className={'home_container'}>
+                {
+                    this.state.home_list.map((item,index)=>{
+                        return <HomeItem key={index} item={item} history={this.props.history}/>
+                    })
+                }
+            </div>;
+
         return(
             <div>
                 <Header/>
-                <div className={'home_container'}>
-                    {
-                        this.state.home_list.map((item,index)=>{
-                            return <HomeItem key={index} item={item} history={this.props.history}/>
-                        })
-                    }
-                </div>
+                <GreatList container={container} onScroll={this.onScroll}/>
                 <Footer home_props={this.props}/>
             </div>
         )
