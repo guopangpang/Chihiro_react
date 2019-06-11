@@ -11,34 +11,54 @@ class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            home_list:[]
+            home_list:[],
+            height:100,
+            total:20,
+            start:0,
+            isloading:true,
         }
     }
     componentDidMount(){
-        let obj = {
-            title:'清华自动化机电学系',
-            info:'这里的专业为何数一数二，与北大的自动化有什么区别，听听师兄给你耐心解答听听师兄给你耐心解答听听师兄给你耐心解答',
-            name:'暗*月',
-            time:'2019年3月24',
-            good_present:'95%',
-            pay_person:'233',
-            header_img:'../../image/image.jpg',
-            img:'../../image/image.jpg'
-        };
-        for(let i=0;i<6;i++){
-            this.state.home_list.push(obj)
-        }
-        this.setState({
-            home_list:this.state.home_list
-        });
+        this.get_home_data();
     }
     method =() =>{
-      console.log('method',this.props);
+        console.log('method',this.props);
     };
-    onScroll = (scrollHeight,offsetHeight,scrollTop) =>{
-        if((scrollHeight - offsetHeight - scrollTop)<100){
-            console.log(333333)
+    onScroll = () =>{
+        console.log(333333);
+        if(this.state.isloading){
+            this.get_home_data()
         }
+    };
+    get_home_data = () =>{
+        this.setState({
+            isloading:false
+        },()=>{
+            for(let i=this.state.start;i<this.state.start + 6;i++){
+                let obj = {
+                    title:'清华自动化机电学系',
+                    info:'这里的专业为何数一数二，与北大的自动化有什么区别，听听师兄给你耐心解答听听师兄给你耐心解答听听师兄给你耐心解答',
+                    name:'暗*月',
+                    time:'2019年3月24',
+                    good_present:'95%',
+                    pay_person:i,
+                    header_img:'../../image/image.jpg',
+                    img:'../../image/image.jpg'
+                };
+                this.state.home_list.push(obj)
+            }
+            this.state.start = this.state.start + 6;
+            this.setState({
+                home_list:this.state.home_list,
+                start:this.state.start
+            },()=>{
+                setTimeout(()=>{
+                    this.setState({
+                        isloading:true
+                    })
+                },2000);
+            });
+        });
     };
     render(){
         let container =
@@ -53,7 +73,9 @@ class Home extends Component{
         return(
             <div>
                 <Header/>
-                <GreatList container={container} onScroll={this.onScroll}/>
+                <GreatList onScroll={this.onScroll} height={this.state.height} total={this.state.total}>
+                    {container}
+                </GreatList>
                 <Footer home_props={this.props}/>
             </div>
         )

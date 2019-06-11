@@ -12,15 +12,17 @@ class GreatList extends Component{
         console.log(this.props)
     }
     onScroll = () =>{
-        // console.log(this.state.great_list.scrollHeight);
-        // console.log(this.state.great_list.offsetHeight);
-        // console.log(this.state.great_list.scrollTop);
-        this.props.onScroll(this.state.great_list.scrollHeight,this.state.great_list.offsetHeight,this.state.great_list.scrollTop)
+        let scrollHeight = this.state.great_list.scrollHeight;
+        let offsetHeight = this.state.great_list.offsetHeight;
+        let scrollTop = this.state.great_list.scrollTop;
+        if((scrollHeight - offsetHeight - scrollTop)<this.props.height){
+            this.props.onScroll()
+        }
     };
     render() {
         return (
             <div className={'great_list_container'} onScrollCapture={this.onScroll} ref={(great_list)=>{this.state.great_list= great_list}}>
-                {this.props.container}
+                {this.props.children}
             </div>
         )
     }
