@@ -52,8 +52,8 @@ class Question extends Component{
         });
     };
     onScroll = () => {
+        console.log('onScroll');
         if(this.state.isloading){
-            console.log('onScroll');
             this.get_data();
         }
     };

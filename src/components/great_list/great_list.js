@@ -15,22 +15,28 @@ class GreatList extends Component{
         let scrollHeight = this.state.great_list.scrollHeight;
         let offsetHeight = this.state.great_list.offsetHeight;
         let scrollTop = this.state.great_list.scrollTop;
-        if((scrollHeight - offsetHeight - scrollTop)<this.props.height){
+        console.log(scrollHeight,offsetHeight,scrollTop);
+        if((scrollHeight - offsetHeight - scrollTop)<100){
             this.props.onScroll()
         }
     };
     render() {
-        let show_list = [];
-        console.log(11,this.props.list.slice(this.props.start - this.props.show_length,this.props.start));
-        show_list = this.props.list.slice(this.props.start - this.props.show_length,this.props.start)
+        let show_and_buffer = this.props.show_length + this.props.buffersize;
+        let startOffset = 0, endOffset = 0;
+        let show_list = this.props.list.slice(this.props.start - show_and_buffer, this.props.start);;
+        let height = this.props.height.split('rem')[0]*this.props.list.length;
+        startOffset = height - 68;
+        console.log(height);
 
         return (
             <div className={'great_list_container'} onScrollCapture={this.onScroll} ref={(great_list)=>{this.state.great_list= great_list}}>
-                {
-                    show_list.map((item,index)=>{
-                        return <this.props.item key={index} item={item}/>
-                    })
-                }
+                <div style={{'height':height - startOffset + 'rem', 'paddingTop':startOffset + 'rem'}} >
+                    {
+                        show_list.map((item,index)=>{
+                            return <this.props.item key={index} item={item}/>
+                        })
+                    }
+                </div>
             </div>
         )
     }

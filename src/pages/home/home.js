@@ -16,7 +16,8 @@ class Home extends Component{
             total:20,
             start:0,
             isloading:true,
-            show_length:10,
+            show_length:4,
+            buffersize:4,
         }
     }
     componentDidMount(){
@@ -26,6 +27,7 @@ class Home extends Component{
         console.log('method',this.props);
     };
     onScroll = () =>{
+        console.log('onScroll')
         if(this.state.isloading){
             this.get_home_data()
         }
@@ -34,7 +36,7 @@ class Home extends Component{
         this.setState({
             isloading:false
         },()=>{
-            for(let i=this.state.start;i<this.state.start + this.state.show_length;i++){
+            for(let i=this.state.start;i<this.state.start + this.state.show_length + this.state.buffersize;i++){
                 let obj = {
                     title:'清华自动化机电学系',
                     info:'这里的专业为何数一数二，与北大的自动化有什么区别，听听师兄给你耐心解答听听师兄给你耐心解答听听师兄给你耐心解答',
@@ -47,7 +49,7 @@ class Home extends Component{
                 };
                 this.state.home_list.push(obj)
             }
-            this.state.start = this.state.start + this.state.show_length;
+            this.state.start = this.state.start + this.state.show_length + this.state.buffersize;
             this.setState({
                 home_list:this.state.home_list,
                 start:this.state.start
@@ -56,24 +58,16 @@ class Home extends Component{
                     this.setState({
                         isloading:true
                     })
-                },2000);
+                },1000);
             });
         });
     };
     render(){
-        let container =
-            <div className={'home_container'}>
-                {
-                    this.state.home_list.map((item,index)=>{
-                        return <HomeItem key={index} item={item} history={this.props.history}/>
-                    })
-                }
-            </div>;
-
         return(
-            <div>
+            <div className={'home_container'}>
                 <Header/>
-                <GreatList onScroll={this.onScroll} height={this.state.height} list={this.state.home_list} show_length={this.state.show_length} start={this.state.start} item={HomeItem}>
+                <GreatList onScroll={this.onScroll} height={'8.5rem'} list={this.state.home_list}  buffersize={this.state.buffersize}
+                           show_length={this.state.show_length} start={this.state.start} item={HomeItem}>
                 </GreatList>
                 <Footer home_props={this.props}/>
             </div>
